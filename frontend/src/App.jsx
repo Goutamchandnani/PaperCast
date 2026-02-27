@@ -3,7 +3,7 @@ import axios from 'axios'
 import UploadSection from './components/UploadSection'
 import ProgressBar from './components/ProgressBar'
 import AudioPlayer from './components/AudioPlayer'
-import { Headphones, Loader2, AlertCircle, Github, Linkedin, Heart } from 'lucide-react'
+import { Headphones, Loader2, AlertCircle, Github, Linkedin, Heart, Car, Activity, Zap } from 'lucide-react'
 
 const API_BASE_URL = 'http://127.0.0.1:8000/api/podcast'
 
@@ -106,6 +106,32 @@ function App() {
                 </div>
                 <p>Turn complex research papers into engaging, conversational podcasts.</p>
             </header>
+
+            {status === 'idle' && (
+                <div className="features-section">
+                    <div className="feature-card">
+                        <div className="feature-icon-wrapper">
+                            <Car size={24} className="feature-icon" />
+                        </div>
+                        <h3>Commute & Learn</h3>
+                        <p>Listen to latest research papers while driving or taking the train.</p>
+                    </div>
+                    <div className="feature-card">
+                        <div className="feature-icon-wrapper">
+                            <Activity size={24} className="feature-icon" />
+                        </div>
+                        <h3>Cardio Companion</h3>
+                        <p>Turn your workout sessions into productive learning experiences.</p>
+                    </div>
+                    <div className="feature-card">
+                        <div className="feature-icon-wrapper">
+                            <Zap size={24} className="feature-icon" />
+                        </div>
+                        <h3>Screen-Free</h3>
+                        <p>Rest your eyes from screens without falling behind on research.</p>
+                    </div>
+                </div>
+            )}
 
             <main className="main-content glass-card">
                 {status === 'idle' && (
