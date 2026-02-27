@@ -3,7 +3,7 @@ import axios from 'axios'
 import UploadSection from './components/UploadSection'
 import ProgressBar from './components/ProgressBar'
 import AudioPlayer from './components/AudioPlayer'
-import { Headphones, Loader2, AlertCircle } from 'lucide-react'
+import { Headphones, Loader2, AlertCircle, Github, Linkedin, Heart } from 'lucide-react'
 
 const API_BASE_URL = 'http://127.0.0.1:8000/api/podcast'
 
@@ -171,6 +171,20 @@ function App() {
                     </div>
                 )}
             </main>
+
+            <footer className="footer">
+                <p>
+                    Made with <Heart size={16} className="heart-icon" /> by Goutam Chandnani
+                </p>
+                <div className="social-links">
+                    <a href="https://www.linkedin.com/in/goutamchandnani/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="LinkedIn">
+                        <Linkedin size={24} />
+                    </a>
+                    <a href="https://github.com/Goutamchandnani/PaperCast" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="GitHub">
+                        <Github size={24} />
+                    </a>
+                </div>
+            </footer>
         </div>
     )
 }
