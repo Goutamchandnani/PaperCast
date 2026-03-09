@@ -5,7 +5,7 @@ import ProgressBar from './components/ProgressBar'
 import AudioPlayer from './components/AudioPlayer'
 import { Headphones, Loader2, AlertCircle, Github, Linkedin, Heart, Car, Activity, Zap } from 'lucide-react'
 
-const API_BASE_URL = 'http://127.0.0.1:8000/api/podcast'
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:8000/api/podcast';
 
 function App() {
     const [file, setFile] = useState(null)
